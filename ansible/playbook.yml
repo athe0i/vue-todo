@@ -1,0 +1,32 @@
+---
+
+- hosts: all
+  sudo: yes
+  remote_user: root
+  gather_facts: no
+  pre_tasks:
+    - name: install python
+      raw: sudo apt-get -y install python
+  tasks:
+    - name: add apt key for nodesource
+      apt_key: url=https://deb.nodesource.com/gpgkey/nodesource.gpg.key
+
+    - name: add repo for nodesource
+      apt_repository:
+          repo: 'deb https://deb.nodesource.com/node_6.x xenial main'
+          update_cache: yes
+
+
+    - name: install nodejs
+      apt: name=nodejs
+
+    - name: upgrade system
+      apt:
+        upgrade: dist
+        update_cache: yes
+
+    - name: install express
+      npm:
+        name: express
+        state: latest
+        global: true

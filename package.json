@@ -1,0 +1,25 @@
+{
+  "name": "vue-todo",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "babel": "^6.23.0",
+    "babel-loader": "^6.3.2",
+    "body-parser": "~1.16.0",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.0",
+    "ejs": "~2.5.5",
+    "express": "~4.14.1",
+    "mongoose": "^4.8.4",
+    "morgan": "~1.7.0",
+    "sass-loader": "^6.0.2",
+    "serve-favicon": "~2.3.2",
+    "vue": "^2.1.10",
+    "vue-loader": "^11.1.0",
+    "vue-router": "^2.2.1",
+    "vuex": "^2.1.2"
+  }
+}
